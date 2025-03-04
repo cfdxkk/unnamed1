@@ -45,12 +45,6 @@
 
 <style lang="css" scoped>
 	.cube-container {
-		/* background-color: #66ccff; */
-		/* position: relative; */
-
-		/* transform: rotate(-45deg) translate(10px, 10px); */
-
-		/* position: relative; */
 		z-index: 10;
 	}
 	

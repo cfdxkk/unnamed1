@@ -12,7 +12,7 @@
     animation: blur_animation 8s ease-in-out 2s forwards;
 
 		position: absolute;
-		z-index: 999;
+		z-index: 200;
 	}
 
 	@keyframes blur_animation {
