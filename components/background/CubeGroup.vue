@@ -28,7 +28,7 @@
     top: -20vh;
 
     transform: rotate(-45deg) translate(300px, 300px);
-    animation: move_cube_1 8s ease-in-out forwards;
+    animation: move_cube_1 6s ease-in-out forwards;
   }
 
   @keyframes move_cube_1 {
@@ -36,7 +36,7 @@
       transform: rotate(-45deg) translate(300px, 300px);
     }
     to {
-      transform: rotate(-45deg) translate(300px, 200px);
+      transform: rotate(-45deg) translate(300px, 260px);
     }
   }
 
@@ -47,7 +47,7 @@
     top: 5vh;
 
     transform: rotate(-45deg) translate(300px, 320px);
-    animation: move_cube_2 6s ease-out 0.2s forwards;
+    animation: move_cube_2 5s ease-in-out 0.2s forwards;
   }
 
   @keyframes move_cube_2 {
@@ -55,7 +55,7 @@
       transform: rotate(-45deg) translate(300px, 320px);
     }
     to {
-      transform: rotate(-45deg) translate(300px, 200px);
+      transform: rotate(-45deg) translate(300px, 250px);
     }
   }
 
