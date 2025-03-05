@@ -8,7 +8,11 @@
 		set: value => is3DCubeReady.value = value,
 	})
 
+	console.log('is3DCubeReady', is3DCubeReady.value)
+	console.log('isBackgroundAnimationFinished', isBackgroundAnimationFinished.value)
+
 	onMounted(() => {
+		console.log('rrrrrrrrrrrrrrrrrrrrr remounted')
 		setInterval(() => {
 			isSlow.value = !isSlow.value
 		}, 3000);
@@ -16,7 +20,18 @@
 		setTimeout(() => {
 			isBackgroundAnimationFinished.value = true
 		}, 6000)
+
+		setTimeout(() => {
+			isShowIntroduction.value = true
+		}, 6000)
 	})
+
+	definePageMeta({
+		keepalive: true,
+    pageTransition: {
+      name: 'home',
+    },
+	});
 </script>
 
 <template>
@@ -24,14 +39,20 @@
 		<MainIntroduction v-show="isShowIntroduction" class="main-introduction" :startEntranceAnimation="isShowIntroduction"/>
 		<DDDCube v-show="isShowIntroduction" class="ddd-cube" :startEntranceAnimation="isShowIntroduction" v-model:isReady="is3DCubeReady"/>
 		<LoadingBar v-if="!isShowIntroduction" class="loading-bar" :isSlow="isSlow" :loadingBarWidth="250" :loadingBarHeigth="4" :showBackground="false"/>
-		<BackgroundBlur />
-		<BackgroundCubeGroup />
 	</div>
 </template>
 
 <style lang="css" scoped>
 	.main {
+		width: 100dvw;
+		height: 100dvh;
+
 		overflow: hidden;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 300;
 	}
 
 	.main-introduction {

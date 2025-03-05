@@ -66,25 +66,36 @@
     isReady.value = true;
   }
 
-  onMounted(runder3DCube);
+  const mountedTimes = ref(0)
+  const activedTimes = ref(0)
+  const isFirstRender = computed(() => activedTimes.value === mountedTimes.value)
+
+  onMounted(() => {
+    runder3DCube()
+    mountedTimes.value = mountedTimes.value + 1
+  })
+
+  onActivated(() => {
+    activedTimes.value = activedTimes.value + 1
+  })
 </script>
 
 <template>
-  <div ref="canvasContainer" :class="{ 'canvas-container': true, 'entrance': props.startEntranceAnimation }"></div>
+  <div ref="canvasContainer" :class="{ 'canvas-container': true, 'entrance': props.startEntranceAnimation && isFirstRender }"></div>
 </template>
 
 <style lang="css" scoped>
   .canvas-container {
     width: 300px;
     height: 300px;
-    opacity: 0;
+    opacity: 1;
 
     position: absolute;
     z-index: 300;
   }
 
   .entrance {
-    animation: entrance_animation 1s ease-in-out 2.2s forwards;
+    animation: entrance_animation 1s ease-in-out 2.2s both;
   }
 
   @keyframes entrance_animation {
