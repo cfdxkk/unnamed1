@@ -1,3 +1,9 @@
+# Unnamed Front-end Project 1
+self website for blog or other interesting things.  
+in progress...  
+[demo](https://unnamed1.zerotwo.love/)
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
