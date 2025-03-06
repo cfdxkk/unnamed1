@@ -1,12 +1,12 @@
 <script setup lang="ts">
   const route = useRoute()
   
-  const pos = ref(route.path === '/things' ? 50 : 20) // 初始位置根据路由决定
+  const pos = ref(route.path === '/things' ? 40 : 20) // 初始位置根据路由决定
 
   function moveLeft() {
-    // 如果已经在距右侧 50dvw，则不执行动画
-    if (pos.value === 50) return
-    pos.value = 50
+    // 如果已经在距右侧 40dvw，则不执行动画
+    if (pos.value === 40) return
+    pos.value = 40
   }
 
   function moveRight() {

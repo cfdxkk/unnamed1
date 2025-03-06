@@ -32,7 +32,7 @@
 
 <template>
 	<div class="main">
-		<MainIntroduction v-show="isShowIntroduction" class="main-introduction" :startEntranceAnimation="isShowIntroduction"/>
+		<MainIntroduction v-show="isShowIntroduction" :startEntranceAnimation="isShowIntroduction"/>
 		<DDDCube v-show="isShowIntroduction" class="ddd-cube" :startEntranceAnimation="isShowIntroduction" v-model:isReady="is3DCubeReady"/>
 		<LoadingBar v-if="!isShowIntroduction" class="loading-bar" :isSlow="isSlow" :loadingBarWidth="250" :loadingBarHeigth="4" :showBackground="false"/>
 	</div>
@@ -49,11 +49,6 @@
 		top: 0;
 		left: 0;
 		z-index: 300;
-	}
-
-	.main-introduction {
-		top: 30dvh;
-		left: 10vw;
 	}
 
 	.ddd-cube {

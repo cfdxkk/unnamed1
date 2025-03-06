@@ -8,8 +8,8 @@
 
 <template>
   <div class="things-container">
-    aaaaaaaaaaaa
-    <NuxtLink to="/" style="position: absolute; z-index: 300; top: 200px; left: 200px;">Back</NuxtLink>
+    TODO
+    <!-- <NuxtLink to="/" style="position: absolute; z-index: 300; top: 200px; left: 200px;">Back</NuxtLink> -->
   </div>
 </template>
 
