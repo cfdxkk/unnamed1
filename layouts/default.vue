@@ -1,6 +1,7 @@
 <template>
   <div class="main-page">
     <slot />
+    <BackgroundRouteChangeAnimation />
     <BackgroundBlur />
 		<BackgroundCubeGroup />
   </div>

@@ -33,10 +33,13 @@
 	const cubeBottomTransform = computed(() => {
 		return { transform: `translateY(-${props.width / 2}px)` }
 	})
+	
+	const elementRef = useTemplateRef('element-ref');
+	defineExpose({ elementRef });
 </script>
 
 <template>
-	<div :style="cubeContainerSize" class="cube-container">
+	<div ref="element-ref":style="cubeContainerSize" class="cube-container" >
 		<div :style="cubeTopSize" class="cube-top"></div>
 		<div :style="{ ...cubeMiddleSize, ...cubeMiddleTransform }" class="cube-middle"></div>
 		<div :style="{ ...cubeBottomSize, ...cubeBottomTransform }" class="cube-bottom"></div>

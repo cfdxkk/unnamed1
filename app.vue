@@ -18,11 +18,11 @@
     transition: all 0.8s ease-in-out;
   }
   .things-leave-active {
-    transition: all 0.6s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   .things-enter-from,
   .things-leave-to {
-    opacity: 0.8;
+    opacity: 0.6;
     transform: translate(100dvw, 0);
   }
 
@@ -30,7 +30,7 @@
     transition: all 0.8s ease-in-out;
   }
   .home-leave-active {
-    transition: all 0.6s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   .home-enter-from,
   .home-leave-to {

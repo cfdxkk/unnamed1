@@ -8,11 +8,7 @@
 		set: value => is3DCubeReady.value = value,
 	})
 
-	console.log('is3DCubeReady', is3DCubeReady.value)
-	console.log('isBackgroundAnimationFinished', isBackgroundAnimationFinished.value)
-
 	onMounted(() => {
-		console.log('rrrrrrrrrrrrrrrrrrrrr remounted')
 		setInterval(() => {
 			isSlow.value = !isSlow.value
 		}, 3000);
